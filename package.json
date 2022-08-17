@@ -1,0 +1,58 @@
+{
+    "author": {
+        "name": "Robin Walter",
+        "email": "hello@robinwalter.me",
+        "url": "https://robinwalter.me/"
+    },
+    "bugs": {
+        "url": "https://github.com/robinwalterfit/monorepo-ts-template/issues"
+    },
+    "dependencies": {
+        "chalk": "^5.0.1"
+    },
+    "description": "A git template repository for TypeScript monorepos",
+    "devDependencies": {
+        "@babel/eslint-parser": "^7.18.2",
+        "@commitlint/cli": "^17.0.3",
+        "@commitlint/config-conventional": "^17.0.3",
+        "@commitlint/cz-commitlint": "^17.0.3",
+        "@tsconfig/node12": "^1.0.11",
+        "@types/node": "^18.0.3",
+        "@typescript-eslint/eslint-plugin": "^5.30.6",
+        "@typescript-eslint/parser": "^5.30.6",
+        "commitizen": "^4.2.4",
+        "cz-conventional-changelog": "^3.3.0",
+        "eslint": "^8.19.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-import": "^2.26.0",
+        "husky": "^8.0.1",
+        "lint-staged": "^13.0.3",
+        "prettier": "^2.7.1",
+        "shell-quote": "^1.7.3",
+        "typescript": "^4.7.4"
+    },
+    "engines": {
+        "node": ">= 12.22.0",
+        "pnpm": ">= 7.2.1"
+    },
+    "homepage": "https://github.com/robinwalterfit/monorepo-ts-template",
+    "name": "monorepo-ts-template-project",
+    "packageManager": "pnpm@7.5.1",
+    "private": true,
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/robinwalterfit/monorepo-ts-template.git"
+    },
+    "scripts": {
+        "lint": "pnpm prettier:check && pnpm lint:eslint",
+        "lint:eslint": "eslint . --ext js,jsx,ts,tsx --max-warnings=0 --config .eslintrc.json --no-eslintrc",
+        "lint:staged": "lint-staged",
+        "prepare": "husky install",
+        "prettier:check": "prettier --check .",
+        "prettier:fix": "prettier --write ."
+    },
+    "version": "0.0.0",
+    "workspaces": [
+        "packages/*"
+    ]
+}
