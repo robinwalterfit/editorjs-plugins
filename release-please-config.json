@@ -1,3 +1,7 @@
 {
-    "packages": {}
+    "packages": {
+        "packages/editorjs-plugin-mui": {}
+    },
+    "release-type": "node",
+    "separate-pull-requests": true
 }
